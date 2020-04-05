@@ -2,8 +2,8 @@ language: minimal
 
 jobs:
   include:
-    - name: Linux | x86
-      env: PYPY=pypy-c-jit-latest-linux.tar.bz2
+    - name: Linux | x86_64
+      env: PYPY=pypy-c-jit-latest-linux64.tar.bz2
 
     - name: Linux | arm64
       arch: arm64
