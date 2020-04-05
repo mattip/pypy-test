@@ -1,0 +1,23 @@
+language: minimal
+
+jobs:
+  include:
+    - name: Linux | x86
+      env: PYPY=pypy-c-jit-latest-linux.tar.bz2
+
+    - name: Linux | arm64
+      arch: arm64
+      env: PYPY=pypy-c-jit-latest-aarch64.tar.bz2
+
+    - name: macOS
+      os: osx
+      env: PYPY=pypy-c-jit-latest-osx64.tar.bz2
+
+    - name: Windows
+      os: windows
+      language: shell
+      env:
+        - PYPY=pypy-c-jit-latest-win32.zip
+
+script: ./runtests.sh
+
