@@ -9,6 +9,10 @@ jobs:
       arch: arm64
       env: PYPY=pypy-c-jit-latest-aarch64.tar.bz2
 
+    - name: Linux | s390x
+      arch: s390x
+      env: PYPY=pypy-c-jit-latest-s390x.tar.bz2
+
     - name: macOS
       os: osx
       env: PYPY=pypy-c-jit-latest-osx64.tar.bz2

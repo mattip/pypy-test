@@ -14,9 +14,9 @@ for BRANCH in trunk py3.6; do
     echo
     echo xxxxxxxxxxxxxxxx download xxxxxxxxxxxxxxxx 
     echo
-    wget ${URL}/$PYPY
+    wget -q ${URL}/$PYPY
     if [ "$EXT" == "zip" ]; then
-        unzip $PYPY
+        unzip -q $PYPY
     else
         tar -xf $PYPY
     fi
